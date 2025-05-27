@@ -1,18 +1,30 @@
 
 import { useState } from 'react';
-import { User, MapPin, CreditCard, ShoppingBag, Settings, Edit, Plus, Trash2 } from 'lucide-react';
+import { 
+  User, MapPin, CreditCard, ShoppingBag, Settings, Edit, Plus, Trash2, 
+  Bell, Sun, Moon, Leaf, Truck, Heart, Lock, LogOut
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
+import { Switch } from '@/components/ui/switch';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Separator } from '@/components/ui/separator';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 const Profile = () => {
   const [activeTab, setActiveTab] = useState('profile');
   const [isEditing, setIsEditing] = useState(false);
+  const [theme, setTheme] = useState('light');
+  const [notifications, setNotifications] = useState(true);
+  const [emailUpdates, setEmailUpdates] = useState(true);
+  const [orderUpdates, setOrderUpdates] = useState(true);
+  const [sustainablePackaging, setSustainablePackaging] = useState(true);
 
   const addresses = [
     {
@@ -80,31 +92,37 @@ const Profile = () => {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">My Account</h1>
-          <p className="text-gray-600">Manage your profile, addresses, and preferences</p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">My Account</h1>
+            <p className="text-gray-600">Manage your profile, addresses, and preferences</p>
+          </div>
+          <Avatar className="h-16 w-16 border-2 border-green-100">
+            <AvatarImage src="https://github.com/shadcn.png" alt="Profile" />
+            <AvatarFallback>JD</AvatarFallback>
+          </Avatar>
         </div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
-          <TabsList className="grid w-full grid-cols-5 lg:w-auto lg:grid-cols-5">
-            <TabsTrigger value="profile" className="flex items-center gap-2">
+          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:w-auto gap-2 p-1">
+            <TabsTrigger value="profile" className="flex items-center gap-2 text-sm">
               <User className="h-4 w-4" />
               Profile
             </TabsTrigger>
-            <TabsTrigger value="addresses" className="flex items-center gap-2">
+            <TabsTrigger value="addresses" className="flex items-center gap-2 text-sm">
               <MapPin className="h-4 w-4" />
               Addresses
             </TabsTrigger>
-            <TabsTrigger value="payments" className="flex items-center gap-2">
+            <TabsTrigger value="payments" className="flex items-center gap-2 text-sm">
               <CreditCard className="h-4 w-4" />
               Payments
             </TabsTrigger>
-            <TabsTrigger value="orders" className="flex items-center gap-2">
+            <TabsTrigger value="orders" className="flex items-center gap-2 text-sm">
               <ShoppingBag className="h-4 w-4" />
               Orders
             </TabsTrigger>
-            <TabsTrigger value="settings" className="flex items-center gap-2">
+            <TabsTrigger value="settings" className="flex items-center gap-2 text-sm">
               <Settings className="h-4 w-4" />
               Settings
             </TabsTrigger>
