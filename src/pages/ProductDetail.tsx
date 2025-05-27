@@ -48,7 +48,7 @@ const ProductDetail = () => {
         </Link>
 
         {/* Product Details */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 mb-8 sm:mb-16">
           {/* Product Image */}
           <div>
             <div className="aspect-square overflow-hidden rounded-lg bg-gray-100">
@@ -80,14 +80,14 @@ const ProductDetail = () => {
               </Badge>
             </div>
 
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">{product.name}</h1>
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{product.name}</h1>
             
             <div className="flex items-baseline mb-6">
-              <span className="text-4xl font-bold text-green-600">${product.price}</span>
+              <span className="text-3xl sm:text-4xl font-bold text-green-600">${product.price}</span>
               <span className="text-lg text-gray-500 ml-2">/ {product.weight}</span>
             </div>
 
-            <p className="text-lg text-gray-600 mb-8">{product.description}</p>
+            <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">{product.description}</p>
 
             {/* Features */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -134,9 +134,9 @@ const ProductDetail = () => {
 
         {/* Related Products */}
         {relatedProducts.length > 0 && (
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-8">Related Products</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="mb-6 sm:mb-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">Related Products</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {relatedProducts.map((relatedProduct) => (
                 <Card key={relatedProduct.id} className="group hover:shadow-lg transition-shadow border-green-100">
                   <Link to={`/product/${relatedProduct.id}`}>
@@ -148,15 +148,25 @@ const ProductDetail = () => {
                       />
                     </div>
                   </Link>
-                  <CardContent className="p-4">
+                  <CardContent className="p-3 sm:p-4">
                     <Link to={`/product/${relatedProduct.id}`}>
-                      <h3 className="font-semibold text-gray-900 mb-2 hover:text-green-600 transition-colors">
+                      <h3 className="font-semibold text-gray-900 mb-2 hover:text-green-600 transition-colors text-sm sm:text-base">
                         {relatedProduct.name}
                       </h3>
                     </Link>
                     <div className="flex items-center justify-between">
-                      <span className="text-lg font-bold text-green-600">${relatedProduct.price}</span>
-                      <Button size="sm" variant="outline">View</Button>
+                      <div className="flex items-baseline">
+                        <span className="text-base sm:text-lg font-bold text-green-600">
+                          ${relatedProduct.price}
+                        </span>
+                        <span className="text-xs sm:text-sm text-gray-500 ml-1">/ {relatedProduct.weight}</span>
+                      </div>
+                      <Badge
+                        variant="secondary"
+                        className={relatedProduct.inStock ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
+                      >
+                        {relatedProduct.inStock ? 'In Stock' : 'Out of Stock'}
+                      </Badge>
                     </div>
                   </CardContent>
                 </Card>

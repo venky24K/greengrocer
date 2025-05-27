@@ -47,18 +47,18 @@ const Products = () => {
     <div className="min-h-screen bg-white">
       <Navbar />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">Our Products</h1>
-          <p className="text-lg text-gray-600">
+        <div className="mb-4 sm:mb-8">
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 sm:mb-4">Our Products</h1>
+          <p className="text-base sm:text-lg text-gray-600">
             Discover our full range of fresh, organic, and hydroponic produce
           </p>
         </div>
 
         {/* Filters and Search */}
-        <div className="bg-green-50 p-6 rounded-lg mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="bg-green-50 p-3 sm:p-6 rounded-lg mb-4 sm:mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4">
             {/* Search */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
@@ -116,7 +116,7 @@ const Products = () => {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
           {filteredAndSortedProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

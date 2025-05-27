@@ -12,7 +12,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ product }: ProductCardProps) => {
   return (
-    <Card className="group hover:shadow-lg transition-shadow duration-300 border-green-100">
+    <Card className="group hover:shadow-lg transition-shadow duration-300 border-green-100 flex flex-col h-full">
       <Link to={`/product/${product.id}`}>
         <div className="aspect-square overflow-hidden rounded-t-lg">
           <img
@@ -23,7 +23,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         </div>
       </Link>
       
-      <CardContent className="p-4">
+      <CardContent className="p-3 sm:p-4">
         <div className="flex flex-wrap gap-1 mb-2">
           {product.isOrganic && (
             <Badge variant="secondary" className="bg-green-100 text-green-800 text-xs">
@@ -57,23 +57,25 @@ const ProductCard = ({ product }: ProductCardProps) => {
         </div>
       </CardContent>
       
-      <CardFooter className="p-4 pt-0 space-y-2">
+      <CardFooter className="p-3 sm:p-4 pt-0">
+        <div className="flex flex-col sm:flex-row w-full gap-2">
         <Button 
-          className="w-full bg-green-600 hover:bg-green-700"
+          className="flex-1 bg-green-600 hover:bg-green-700 text-sm sm:text-base py-2 h-auto"
           disabled={!product.inStock}
         >
           <ShoppingCart className="w-4 h-4 mr-2" />
           Add to Cart
         </Button>
-        <Link to={`/benefits/${product.id}`} className="w-full">
+        <Link to={`/benefits/${product.id}`} className="flex-1">
           <Button 
             variant="outline" 
-            className="w-full border-green-300 text-green-700 hover:bg-green-50"
+            className="w-full border-green-300 text-green-700 hover:bg-green-50 text-sm sm:text-base py-2 h-auto"
           >
             <Sparkles className="w-4 h-4 mr-2" />
             Health Benefits
           </Button>
         </Link>
+        </div>
       </CardFooter>
     </Card>
   );
