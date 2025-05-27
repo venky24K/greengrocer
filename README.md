@@ -1,73 +1,143 @@
-# Welcome to your Lovable project
+# 🌱 GreenGrocer - Fresh Organic & Hydroponic Produce
 
-## Project info
+GreenGrocer is a modern e-commerce platform specializing in fresh, organic, and hydroponic produce. Our mission is to provide consumers with access to the highest quality fruits and vegetables while promoting sustainable farming practices.
 
-**URL**: https://lovable.dev/projects/3d99b1a0-5704-46c2-abb0-b23cf87de1b0
+## ✨ Features
 
-## How can I edit this code?
+### 🛒 Shopping Experience
+- Browse a curated selection of organic and hydroponic produce
+- Filter products by category (fruits/vegetables)
+- Sort by price and name
+- Search functionality for quick product discovery
+- Detailed product pages with nutritional benefits
+- Real-time stock status
 
-There are several ways of editing your application.
+### 🌿 Product Categories
+- **Vegetables**: Fresh hydroponic and organic options
+- **Fruits**: Seasonal and exotic varieties
+- Each product includes:
+  - Detailed description
+  - Weight information
+  - Organic/Hydroponic certification
+  - Health benefits
+  - Nutritional information
 
-**Use Lovable**
+### 💚 Sustainability Focus
+- Hydroponic farming information
+- Educational content about organic farming
+- Environmental impact insights
+- Sustainable packaging details
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3d99b1a0-5704-46c2-abb0-b23cf87de1b0) and start prompting.
+### 👤 User Features
+- Personal profile management
+- Order history tracking
+- Favorite products list
+- Delivery preferences
 
-Changes made via Lovable will be committed automatically to this repo.
+### 📱 Modern UI Features
+- Responsive design for all devices
+- Dark mode support
+- Toast notifications
+- Intuitive navigation
+- Accessible interface
 
-**Use your preferred IDE**
+## 🛠️ Technical Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Frontend
+- **Framework**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn-ui
+- **State Management**: React Query
+- **Routing**: React Router
+- **Form Handling**: React Hook Form
+- **Validation**: Zod
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Development Tools
+- ESLint for code quality
+- Prettier for code formatting
+- TypeScript for type safety
+- PostCSS for CSS processing
 
-Follow these steps:
+## 🚀 Getting Started
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. **Prerequisites**
+   - Node.js & npm - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+   - Git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. **Installation**
+   ```bash
+   # Clone the repository
+   git clone <YOUR_GIT_URL>
 
-# Step 3: Install the necessary dependencies.
-npm i
+   # Navigate to project directory
+   cd greengrocer
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+   # Install dependencies
+   npm install
 
-**Edit a file directly in GitHub**
+   # Start development server
+   npm run dev
+   ```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+3. **Available Scripts**
+   ```bash
+   npm run dev          # Start development server
+   npm run build       # Build for production
+   npm run preview     # Preview production build
+   npm run lint        # Check for linting issues
+   npm run lint:fix    # Fix auto-fixable lint issues
+   npm run typecheck   # Run TypeScript type checking
+   npm run format      # Format code with Prettier
+   npm run clean       # Clean build artifacts
+   ```
 
-**Use GitHub Codespaces**
+## 🔧 Development
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Code Organization
+- `/src/components` - Reusable UI components
+- `/src/pages` - Route components
+- `/src/hooks` - Custom React hooks
+- `/src/lib` - Utility functions
+- `/src/data` - Data models and types
 
-## What technologies are used for this project?
+### Best Practices
+- Write clean, self-documenting code
+- Follow TypeScript best practices
+- Maintain consistent code style
+- Write unit tests for critical features
+- Use meaningful commit messages
 
-This project is built with:
+## 📦 Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Deploy your application using your preferred hosting platform:
 
-## How can I deploy this project?
+1. Build the application:
+   ```bash
+   npm run build
+   ```
 
-Simply open [Lovable](https://lovable.dev/projects/3d99b1a0-5704-46c2-abb0-b23cf87de1b0) and click on Share -> Publish.
+2. Preview the build:
+   ```bash
+   npm run preview
+   ```
 
-## Can I connect a custom domain to my Lovable project?
+3. Deploy the `dist` directory to your hosting platform
 
-Yes, you can!
+## 🤝 Contributing
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🌟 Acknowledgments
+
+- UI Components by [shadcn-ui](https://ui.shadcn.com/)
+- Icons by [Lucide](https://lucide.dev/)
+- Built with [Vite](https://vitejs.dev/)
