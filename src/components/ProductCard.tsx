@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { ShoppingCart, Leaf } from 'lucide-react';
+import { ShoppingCart, Leaf, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -57,7 +57,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         </div>
       </CardContent>
       
-      <CardFooter className="p-4 pt-0">
+      <CardFooter className="p-4 pt-0 space-y-2">
         <Button 
           className="w-full bg-green-600 hover:bg-green-700"
           disabled={!product.inStock}
@@ -65,6 +65,15 @@ const ProductCard = ({ product }: ProductCardProps) => {
           <ShoppingCart className="w-4 h-4 mr-2" />
           Add to Cart
         </Button>
+        <Link to={`/benefits/${product.id}`} className="w-full">
+          <Button 
+            variant="outline" 
+            className="w-full border-green-300 text-green-700 hover:bg-green-50"
+          >
+            <Sparkles className="w-4 h-4 mr-2" />
+            Health Benefits
+          </Button>
+        </Link>
       </CardFooter>
     </Card>
   );

@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ShoppingCart, Leaf, Menu, X } from 'lucide-react';
+import { ShoppingCart, Leaf, Menu, X, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
@@ -29,6 +29,13 @@ const Navbar = () => {
               <span>Cart (0)</span>
             </Button>
             
+            <Link to="/profile">
+              <Button variant="outline" size="sm" className="hidden md:flex items-center space-x-2">
+                <User className="h-4 w-4" />
+                <span>Profile</span>
+              </Button>
+            </Link>
+            
             <button
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -46,6 +53,7 @@ const Navbar = () => {
             <Link to="/products" className="block px-3 py-2 text-gray-700 hover:text-green-600">Products</Link>
             <Link to="/about" className="block px-3 py-2 text-gray-700 hover:text-green-600">About</Link>
             <Link to="/blog" className="block px-3 py-2 text-gray-700 hover:text-green-600">Blog</Link>
+            <Link to="/profile" className="block px-3 py-2 text-gray-700 hover:text-green-600">Profile</Link>
             <div className="px-3 py-2">
               <Button variant="outline" size="sm" className="flex items-center space-x-2 w-full">
                 <ShoppingCart className="h-4 w-4" />
