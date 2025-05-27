@@ -45,7 +45,7 @@ export const products: Product[] = [
     id: 3,
     name: "Hydroponic Tomatoes",
     price: 5.99,
-    image: "https://images.unsplash.com/photo-1546470427-e8c6bef95df3?w=400",
+    image: "https://images.unsplash.com/photo-1592841200221-a6898f307baa?w=400",
     category: "vegetables",
     description: "Juicy red tomatoes grown in hydroponic systems",
     isOrganic: true,
@@ -58,7 +58,7 @@ export const products: Product[] = [
     id: 4,
     name: "Organic Kale",
     price: 3.75,
-    image: "https://images.unsplash.com/photo-1565384444800-6e6bb2e92652?w=400",
+    image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=400",
     category: "vegetables",
     description: "Dark leafy greens packed with vitamins",
     isOrganic: true,
@@ -97,7 +97,7 @@ export const products: Product[] = [
     id: 7,
     name: "Hydroponic Basil",
     price: 2.50,
-    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400",
+    image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=400",
     category: "vegetables",
     description: "Aromatic fresh basil herbs",
     isOrganic: true,
@@ -136,7 +136,7 @@ export const products: Product[] = [
     id: 10,
     name: "Organic Radishes",
     price: 2.75,
-    image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400",
+    image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400",
     category: "vegetables",
     description: "Crisp and peppery radishes",
     isOrganic: true,
@@ -172,7 +172,7 @@ export const products: Product[] = [
     benefits: ["High in vitamin C", "Good source of fiber", "Low in calories", "Contains choline", "May support brain health"]
   },
 
-  // Fruits with correct images and benefits
+  // Fruits
   {
     id: 26,
     name: "Organic Strawberries",
@@ -190,7 +190,7 @@ export const products: Product[] = [
     id: 27,
     name: "Hydroponic Blueberries",
     price: 8.99,
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400",
+    image: "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?w=400",
     category: "fruits",
     description: "Antioxidant-rich blueberries",
     isOrganic: true,
@@ -216,7 +216,7 @@ export const products: Product[] = [
     id: 29,
     name: "Hydroponic Grapes",
     price: 7.50,
-    image: "https://images.unsplash.com/photo-1537640538966-79f369143925?w=400",
+    image: "https://images.unsplash.com/photo-1515524738708-327f6b0037a7?w=400",
     category: "fruits",
     description: "Sweet purple grapes",
     isOrganic: true,
@@ -268,7 +268,7 @@ export const products: Product[] = [
     id: 33,
     name: "Hydroponic Blackberries",
     price: 8.50,
-    image: "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?w=400",
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400",
     category: "fruits",
     description: "Dark, sweet blackberries",
     isOrganic: true,
@@ -303,7 +303,6 @@ export const products: Product[] = [
     weight: "400g",
     benefits: ["Extremely high in vitamin C", "Good source of fiber", "Contains vitamin K", "May support immune function", "Rich in antioxidants"]
   },
-  // Add more fruits with specific images for cranberries
   {
     id: 49,
     name: "Hydroponic Cranberries",
