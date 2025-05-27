@@ -57,24 +57,24 @@ const ProductCard = ({ product }: ProductCardProps) => {
         </div>
       </CardContent>
       
-      <CardFooter className="p-3 sm:p-4 pt-0">
-        <div className="flex flex-col sm:flex-row w-full gap-2">
-        <Button 
-          className="flex-1 bg-green-600 hover:bg-green-700 text-sm sm:text-base py-2 h-auto"
-          disabled={!product.inStock}
-        >
-          <ShoppingCart className="w-4 h-4 mr-2" />
-          Add to Cart
-        </Button>
-        <Link to={`/benefits/${product.id}`} className="flex-1">
+      <CardFooter className="p-3 sm:p-4 pt-0 mt-auto">
+        <div className="grid grid-cols-1 xs:grid-cols-2 gap-2 w-full">
           <Button 
-            variant="outline" 
-            className="w-full border-green-300 text-green-700 hover:bg-green-50 text-sm sm:text-base py-2 h-auto"
+            className="bg-green-600 hover:bg-green-700 text-xs sm:text-sm py-1.5 h-auto min-h-[36px] flex items-center justify-center"
+            disabled={!product.inStock}
           >
-            <Sparkles className="w-4 h-4 mr-2" />
-            Health Benefits
+            <ShoppingCart className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5" />
+            <span className="whitespace-nowrap">Add to Cart</span>
           </Button>
-        </Link>
+          <Link to={`/benefits/${product.id}`} className="block">
+            <Button 
+              variant="outline" 
+              className="w-full border-green-300 text-green-700 hover:bg-green-50 text-xs sm:text-sm py-1.5 h-auto min-h-[36px] flex items-center justify-center"
+            >
+              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5" />
+              <span className="whitespace-nowrap">Health Benefits</span>
+            </Button>
+          </Link>
         </div>
       </CardFooter>
     </Card>
